@@ -1,6 +1,7 @@
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 
+from src.network_data.bgp import collect_network_data_bgp_neighbors
 from src.network_data.facts import collect_network_data_facts
 from src.network_data.interfaces import collect_network_data_interfaces
 
@@ -11,6 +12,7 @@ agent = Agent(
     tools=[
         collect_network_data_facts,
         collect_network_data_interfaces,
+        collect_network_data_bgp_neighbors,
     ],
     instructions="""
     0. Listen carefully to the user's query before executing any functions.
