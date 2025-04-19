@@ -8,7 +8,7 @@ from src.nornir_network_inventory import nr
 from src.result_processor import process_network_results
 
 
-def collect_network_data():
+def collect_network_data_facts():
     """
     Recopila datos de red utilizando nornir y napalm, procesa los resultados
     y devuelve un string JSON con los datos formateados.
