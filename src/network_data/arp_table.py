@@ -1,11 +1,19 @@
 import json
 
+from agno.tools import tool
 from nornir_napalm.plugins.tasks import napalm_get
 
 from src.nornir_network_inventory import nr
 from src.result_processor import process_network_results
 
 
+@tool(
+    name="collect_network_data_arp_table",
+    description="Recopila datos de la tabla ARP de los dispositivos de red",
+    cache_results=True,
+    cache_dir="/tmp/netai_cache/arp_table",
+    cache_ttl=3600
+)
 def collect_network_data_arp_table():
     """
     Recopila datos de la tabla ARP utilizando nornir y napalm, procesa los resultados

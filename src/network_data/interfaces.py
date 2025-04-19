@@ -1,11 +1,19 @@
 import json
 
+from agno.tools import tool
 from nornir_napalm.plugins.tasks import napalm_get
 
 from src.nornir_network_inventory import nr
 from src.result_processor import process_network_results
 
 
+@tool(
+    name="collect_network_data_interfaces",
+    description="Recopila datos de las interfaces de red de los dispositivos de red",
+    cache_results=True,
+    cache_dir="/tmp/netai_cache/interfaces",
+    cache_ttl=3600
+)
 def collect_network_data_interfaces():
     """
     Recopila datos de interfaces de red utilizando nornir y napalm, procesa los resultados
