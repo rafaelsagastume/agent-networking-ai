@@ -1,0 +1,9 @@
+---
+default:
+  data:
+    auth_strict_key: false
+
+ios_xr:
+  data:
+    auth_username: admin
+    auth_password: C1sco12345

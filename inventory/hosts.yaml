@@ -1,0 +1,8 @@
+---
+cisco-iosxr:
+  hostname: sandbox-iosxr-1.cisco.com
+  groups:
+    - default
+    - ios_xr
+  data:
+    type: ios_xr
