@@ -1,8 +1,6 @@
 import json
-import logging
 
 from nornir_napalm.plugins.tasks import napalm_get
-from nornir_utils.plugins.functions import print_result
 
 from src.nornir_network_inventory import nr
 from src.result_processor import process_network_results
