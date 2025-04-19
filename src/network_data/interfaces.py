@@ -21,7 +21,7 @@ def collect_network_data_interfaces():
     - Dirección IP/Máscara: Configuración IP de la interfaz
     - Velocidad: Velocidad de la interfaz en Mbps
     - MTU: Unidad máxima de transferencia
-    - Descripción: Descripción configurada para la interfaz
+    - Descripción: Descripción configurada para la interfaz (nombre, datos extras, proposito)
     - Último cambio: Tiempo desde el último cambio de estado
 
     Returns:

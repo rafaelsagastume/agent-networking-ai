@@ -8,7 +8,7 @@ from src.network_data.interfaces import collect_network_data_interfaces
 agent = Agent(
     name="Ingeniero de Redes",
     description="Ingeniero de Redes con acceso a datos de red",
-    model=OpenAIChat(id="gpt-4.1"),
+    model=OpenAIChat(id="gpt-4.1-mini"),
     tools=[
         collect_network_data_facts,
         collect_network_data_interfaces,
