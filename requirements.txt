@@ -1,3 +1,5 @@
 agno
 openai
 nornir
+nornir_utils
+nornir_napalm

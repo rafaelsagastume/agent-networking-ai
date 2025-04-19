@@ -1,8 +1,8 @@
 ---
 cisco-iosxr:
   hostname: sandbox-iosxr-1.cisco.com
+  username: admin
+  password: C1sco12345
   groups:
     - default
-    - ios_xr
-  data:
-    type: ios_xr
+  platform: iosxr
