@@ -2,12 +2,16 @@ from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 
 from src.network_data.facts import collect_network_data_facts
+from src.network_data.interfaces import collect_network_data_interfaces
 
 agent = Agent(
     name="Ingeniero de Redes",
     description="Ingeniero de Redes con acceso a datos de red",
-    model=OpenAIChat(id="o4-mini"),
-    tools=[collect_network_data_facts],
+    model=OpenAIChat(id="gpt-4.1"),
+    tools=[
+        collect_network_data_facts,
+        collect_network_data_interfaces,
+    ],
     instructions="""
     0. Listen carefully to the user's query before executing any functions.
     1. Only execute network data collection functions when necessary for answering the query.
