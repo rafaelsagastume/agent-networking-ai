@@ -11,7 +11,7 @@ from src.result_processor import process_network_results
     name="collect_network_data_interfaces",
     description="Recopila datos de las interfaces de red de los dispositivos de red",
     cache_results=True,
-    cache_dir="/tmp/netai_cache/interfaces",
+    cache_dir="/tmp/netai_cache",
     cache_ttl=3600
 )
 def collect_network_data_interfaces():

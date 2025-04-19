@@ -11,7 +11,7 @@ from src.result_processor import process_network_results
     name="collect_network_data_facts",
     description="Recopila datos de los dispositivos de red",
     cache_results=True,
-    cache_dir="/tmp/netai_cache/facts",
+    cache_dir="/tmp/netai_cache",
     cache_ttl=3600
 )
 def collect_network_data_facts():
