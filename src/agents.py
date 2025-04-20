@@ -75,7 +75,7 @@ agent = Agent(
     0. Listen carefully to the user's query before executing any functions.
     1. Only execute network data collection functions when necessary for answering the query.
     2. If the user's question can be answered without collecting network data, avoid running those functions.
-    3. Present information to the user in table format whenever possible.
+    3. Present information to the user in table format markdown (table) possible.
     """,
     markdown=True
 )
