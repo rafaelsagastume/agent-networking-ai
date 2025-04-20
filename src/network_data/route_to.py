@@ -10,9 +10,6 @@ from src.result_processor import process_network_results
 @tool(
     name="collect_network_data_route_to",
     description="Recopila información de rutas específicas desde los dispositivos de red",
-    cache_results=True,
-    cache_dir="/tmp/netai_cache",
-    cache_ttl=3600
 )
 def collect_network_data_route_to(destination: str = "8.8.8.8"):
     """
