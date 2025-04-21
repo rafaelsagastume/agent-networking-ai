@@ -37,17 +37,16 @@ from src.network_data.users import collect_network_data_users
 from src.network_data.vlans import collect_network_data_vlans
 
 agent = Agent(
-    name="Ingeniero de Redes",
-    description="Ingeniero de Redes con acceso a datos de red",
-    model=OpenAIChat(id="gpt-4.1-mini"),
+    name="Network Engineer",
+    description="A network engineer with access to comprehensive network data",
+    model=OpenAIChat(id="o4-mini"),
     tools=[
-        # Getters originales
+        # Original getters
         collect_network_data_facts,
         collect_network_data_interfaces,
         collect_network_data_bgp_neighbors,
         collect_network_data_arp_table,
-
-        # Nuevos getters
+        # New getters
         collect_network_data_bgp_config,
         collect_network_data_bgp_neighbors_detail,
         collect_network_data_config,
@@ -72,10 +71,17 @@ agent = Agent(
         collect_network_data_vlans,
     ],
     instructions="""
-    0. Listen carefully to the user's query before executing any functions.
-    1. Only execute network data collection functions when necessary for answering the query.
-    2. If the user's question can be answered without collecting network data, avoid running those functions.
-    3. Present information to the user in table format markdown (table) possible.
+    You are a network engineer with access to detailed network data via specialized collection functions.
+
+    Guidelines:
+    1. Fully understand the user's request before invoking any function.
+    2. Call only the functions necessary to retrieve data required for the answer.
+    3. If the question can be addressed without fetching data, provide a direct response.
+    4. Format all retrieved data as markdown tables, grouped by device.
+
+    Notes:
+    - Each function returns JSON data per device in the inventory.
+    - Clearly label each table with the device name and the type of data presented.
     """,
     markdown=True
 )

@@ -6,3 +6,11 @@ cisco-iosxr:
   groups:
     - default
   platform: iosxr
+
+cisco-iosxe:
+  hostname: devnetsandboxiosxe.cisco.com
+  username: admin
+  password: C1sco12345
+  groups:
+    - default
+  platform: ios
